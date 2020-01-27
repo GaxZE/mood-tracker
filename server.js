@@ -7,7 +7,7 @@ const port = process.env.PORT || 3000;
 app.use(bodyParser.json());
 
 app.get("/", () => {
-  return console.log("Hello world");
+  console.log("Hello world");
 });
 
 app.listen(port, () => {
