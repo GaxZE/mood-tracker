@@ -1,9 +1,11 @@
-import typer
+import click
 
-def main():
-    rating = typer.prompt("Please give yesterday a rating from 1 to 5 of how your day was yesterday")
-    print(f"You rated yesterday: {rating}")
+@click.command()
+@click.option('--rating', prompt=True, type=int)
+@click.option('--comment', prompt=True, type=str)
+def main(rating, comment):
+    click.echo("Rating for today has been stored.")
 
 
-if __name__ == "__main__":
-    typer.run(main)
+if __name__ == '__main__':
+    main()
